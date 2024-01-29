@@ -1,0 +1,17 @@
+<h1>Welcome To Addition</h1>
+
+<label for="Number 1">Enter a First Number     :</label>
+<input type="number" name="Number 1" [(ngModel)]="no1"> <br/>
+
+<label for="Number 2">Enter a Second Number     :</label>
+<input type="number" name="Number 2" [(ngModel)]="no2"> <br/>
+
+<label for="Answer">Answer    :</label>
+<input type="number" name="Answer" [(ngModel)]="answer"><br/>
+
+<input type="button" (click)="add()" value="Addition">
+<input type="button" (click)="subtract()" value="Subtraction"> 
+<input type="button" (click)="multiply()" value="Multiplication">
+<input type="button" (click)="division()" value="Division">
+<input type="reset"  (click)="resetform()" value="Reset"> 
+<p>Basic Calculator Works!</p>
