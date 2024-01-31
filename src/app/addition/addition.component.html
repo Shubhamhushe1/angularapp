@@ -1,15 +1,21 @@
-<h1>Welcome To Addition</h1>
 
-<label for="Number 1">Enter a First Number     :</label>
+<h1>Welcome To Basic Calculator</h1>
+<p>{{message1}}</p>   <!-- We got message1 from typescript  => addition.component.ts file -->
+
+
+<!-- We are going to learn more about [(ngModel)] in further lectures -->
+<!-- [(ngModel)] => It is use for two way binding as of now  -->
+<!-- [(your-text)] => [(....)] => Banana in the box we call it   -->
+<label for="Number 1">Enter a First Number</label>
 <input type="number" name="Number 1" [(ngModel)]="no1"> <br/>
 
-<label for="Number 2">Enter a Second Number     :</label>
-<input type="number" name="Number 2" [(ngModel)]="no2"> <br/>
+<label for="Number 2">Enter a Second Number</label>
+<input type="number" name="Number 2" [(ngModel)]="no2"> <br/>  
 
-<label for="Answer">Answer    :</label>
-<input type="number" name="Answer" [(ngModel)]="answer"><br/>
+<label for="Answer">Answer</label>
+<input type="number" name="Answer" [value]="answer"><br/>
 
-<input type="button" (click)="add()" value="Addition">
+<input type="button" (click)="add()" value="Addition">   <!-- add() here we call a function or method  -->
 <input type="button" (click)="subtract()" value="Subtraction"> 
 <input type="button" (click)="multiply()" value="Multiplication">
 <input type="button" (click)="division()" value="Division">
