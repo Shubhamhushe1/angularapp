@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 @Component({    // => @Component is just like @Controller in Java SpringBoot
   selector: 'app-addition', // => Component selector we have to mention this in addition.component.html file as a tag
   standalone: true,
-  imports: [ FormsModule ], // => forms module for importing forms from html files 
+  imports: [ FormsModule ], // => forms module for importing forms from html files we neet to add this to two way bindings
   templateUrl: './addition.component.html',
   styleUrl: './addition.component.css'
 })

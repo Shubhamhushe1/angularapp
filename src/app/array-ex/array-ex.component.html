@@ -1,0 +1,17 @@
+<p>ArrayEx Works!</p>
+<table *ngIf="show">   <!-- <*ngIF is use to add some rules or conditions to elements or attributes> -->
+<!-- *ngIf: Angular structural directive for conditional rendering. Adds or removes elements based on a given expression. -->
+
+<tr>
+<th>    Roll No  </th>
+<th>    Name    </th>
+</tr>
+<tr *ngFor = "let student of students">  <!-- <*ngFor is use to fetch data from TypeScript File > -->
+
+<!-- *ngFor: Angular structural directive for iterating over a collection. Repeats HTML for each item in the collection. -->
+    <td>{{student.rno}}</td>
+    <td>{{student.name}}</td>
+</tr>
+
+
+</table>
