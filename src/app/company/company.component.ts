@@ -6,15 +6,14 @@ import { Company, CompanyService } from '../company.service';
 @Component({
   selector: 'app-company',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './company.component.html',
-  styleUrl: './company.component.css'
+  styleUrl: './company.component.css',
 })
 export class CompanyComponent {
+  company: Company = new Company('', '', '', '');
 
-  company: Company = new Company("", "", "", "");
-
-  constructor(private companyService: CompanyService) { }
+  constructor(private companyService: CompanyService) {}
 
   addCompany() {
     this.companyService.addCompany(this.company).subscribe();

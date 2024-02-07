@@ -6,15 +6,13 @@ import { DynamicroutingComponent } from './dynamicrouting/dynamicrouting.compone
 import { CompanyComponent } from './company/company.component';
 
 export const routes: Routes = [
+  { path: 'addition', component: AdditionComponent },
 
+  { path: 'array-ex', component: ArrayExComponent },
 
-{path: 'addition', component:AdditionComponent},
+  { path: 'pipes-ex', component: PipesExComponent },
 
-{path: 'array-ex', component:ArrayExComponent},
+  { path: 'dynamicrouting', component: DynamicroutingComponent },
 
-{path: 'pipes-ex', component:PipesExComponent},
-
-{ path : 'dynamicrouting', component:DynamicroutingComponent},
-
-{ path : 'company', component:CompanyComponent}
+  { path: 'company', component: CompanyComponent },
 ];
