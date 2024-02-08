@@ -13,9 +13,16 @@ import { Company, CompanyService } from '../company.service';
 export class CompanyComponent {
   company: Company = new Company('', '', '', '');
 
+  
+
   constructor(private companyService: CompanyService) {}
 
   addCompany() {
     this.companyService.addCompany(this.company).subscribe();
   }
+
+  getCompanyName() {
+    this.companyService.getCompanyName(this.company.companyName).subscribe(companyobject=>this.company=companyobject);
+  }
+
 }

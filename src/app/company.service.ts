@@ -10,6 +10,15 @@ export class CompanyService {
   addCompany(company: Company) {
     return this.httpclient.post('http://localhost:8080/addcompany', company);
   }
+
+
+  getCompanyName(companyName:string) {
+
+    return this.httpclient.get<Company>("http://localhost:8080/getcompanybyname/"+companyName);
+  }
+
+  
+
 }
 
 export class Company {
