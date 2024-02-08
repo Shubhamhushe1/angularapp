@@ -11,8 +11,10 @@
     <label for="gstNumber">GST Number:</label><br>
     <input type="text" id="gstNumber" name="gstNumber" [(ngModel)]="company.gstNumber"><br><br>
 
-    <input type="button" value="Submit" (click)="addCompany()">
+    <button type="submit" name="add_company" (click)="addCompany()">Add Company</button>
 
-    <input type="button" value="Submit" (click)="getCompanyName()">
+    <button type="submit" name="get_company" (click)=" getCompanyName()">Get Company By Name</button>
+
+    <button type="reset">Reset All Fields</button>
 
 </form>
