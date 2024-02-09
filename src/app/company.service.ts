@@ -11,13 +11,18 @@ export class CompanyService {
     return this.httpclient.post('http://localhost:8080/addcompany', company);
   }
 
-
   getCompanyName(companyName:string) {
 
     return this.httpclient.get<Company>("http://localhost:8080/getcompanybyname/"+companyName);
   }
 
-  
+  deleteCompanyByCompanyName(companyName:string) {
+
+    return this.httpclient.delete<Boolean>("http://localhost:8080/deletecompany/"+ companyName);
+ 
+  }
+
+
 
 }
 

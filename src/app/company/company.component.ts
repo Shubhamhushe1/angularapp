@@ -13,6 +13,8 @@ import { Company, CompanyService } from '../company.service';
 export class CompanyComponent {
   company: Company = new Company('', '', '', '');
 
+  message: string= "";
+
   
 
   constructor(private companyService: CompanyService) {}
@@ -25,4 +27,20 @@ export class CompanyComponent {
     this.companyService.getCompanyName(this.company.companyName).subscribe(companyobject=>this.company=companyobject);
   }
 
+
+  deleteCompanyByCompanyName(){
+
+    this.companyService.deleteCompanyByCompanyName(this.company.companyName).subscribe(message=>{
+
+      if (message){
+      
+      this.message= "Record deleted";
+      }
+      else
+      { 
+       this.message= "Record not deleted";
+      }
+    });
+   
+  }
 }
