@@ -47,3 +47,35 @@ input:invalid {
 input:invalid:focus {
   outline: none;
 }
+
+/* Style for the table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+/* Style for table headers */
+th {
+  background-color: #f2f2f2; /* Light gray background */
+  border: 1px solid #ddd; /* Add borders */
+  padding: 8px; /* Add padding */
+  text-align: left; /* Align text to the left */
+}
+
+/* Style for table cells */
+td {
+  border: 1px solid #ddd; /* Add borders */
+  padding: 8px; /* Add padding */
+}
+
+/* Alternate row background color */
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+/* Hover effect on rows */
+tr:hover {
+  background-color: #ddd; /* Darker gray background on hover */
+}
+

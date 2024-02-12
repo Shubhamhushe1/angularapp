@@ -25,3 +25,24 @@
 <span style="color: red;">{{message}}</span>
 
 
+<table>   <!-- <*ngIF is use to add some rules or conditions to elements or attributes> -->
+    <!-- *ngIf: Angular structural directive for conditional rendering. Adds or removes elements based on a given expression. -->
+    
+    <tr>
+    <th>    Company Name  </th>
+    <th>    Employees Count    </th>
+    <th>    Company Email  </th>
+    <th>    GST NO    </th>
+
+    </tr>
+    <tr *ngFor = "let company of companyArray">  <!-- <*ngFor is use to fetch data from TypeScript File > -->
+    
+    <!-- *ngFor: Angular structural directive for iterating over a collection. Repeats HTML for each item in the collection. -->
+        <td>{{company.companyName}}</td>
+        <td>{{company.numberOfEmployees}}</td>
+        <td>{{company.companyEmail}}</td>
+        <td>{{company.gstNumber}}</td>
+    </tr>
+    
+    
+    </table>
