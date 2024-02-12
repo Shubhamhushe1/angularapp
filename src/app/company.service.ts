@@ -8,7 +8,7 @@ export class CompanyService {
   constructor(private httpclient: HttpClient) {}
 
   addCompany(company: Company) {
-    return this.httpclient.post('http://localhost:8080/addcompany', company);
+    return this.httpclient.post('http://localhost:8080/addcompany',company);
   }
 
   getCompanyName(companyName:string) {
@@ -20,6 +20,10 @@ export class CompanyService {
 
     return this.httpclient.delete<Boolean>("http://localhost:8080/deletecompany/"+ companyName);
  
+  }
+
+  getAllCompanies(){
+    return this.httpclient.get<Company[]>("http://localhost:8080/getallcompany");
   }
 
 
